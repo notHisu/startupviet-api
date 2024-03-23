@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 // API to get all current post
-app.post("/api/posts", async (req, res) => {
+app.get("/api/posts", async (req, res) => {
   try {
     const posts = await Post.find({});
     res.status(200).json(posts);
@@ -21,7 +21,7 @@ app.post("/api/posts", async (req, res) => {
 });
 
 // API to get post by ID
-app.post("/api/posts/:id", async (req, res) => {
+app.get("/api/posts/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const post = await Post.findById(id);
