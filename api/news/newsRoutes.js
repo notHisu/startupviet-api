@@ -1,12 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const productsController = require("./newsController");
+const newsController = require("./newsController");
 
-// Define routes for news
-router.get("/", productsController.getAllProducts);
-router.get("/:id", productsController.getProductById);
-router.post("/", productsController.createProduct);
-router.put("/:id", productsController.updateProduct);
-router.delete("/:id", productsController.deleteProduct);
+router.get("/api/news/all", newsController.getAllNews);
+router.get("/api/news/:id", newsController.getNewsById);
+router.post("/api/news/add", newsController.addNews);
+router.put("/api/news/update/:id", newsController.updateNewsById);
+router.delete("/api/news/delete/:id", newsController.deleteNewsById);
 
 module.exports = router;

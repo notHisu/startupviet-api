@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const PostSchema = mongoose.Schema({
+const NewsSchema = mongoose.Schema({
   title: {
     type: String,
     required: [true, "Please enter post name"],
@@ -16,6 +16,6 @@ const PostSchema = mongoose.Schema({
   },
 });
 
-const Post = mongoose.model("Post", PostSchema);
+const News = mongoose.model("News", NewsSchema);
 
-module.exports = Post;
+module.exports = News;
