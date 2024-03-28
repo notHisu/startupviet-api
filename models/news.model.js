@@ -25,6 +25,11 @@ const NewsSchema = mongoose.Schema({
     type: String,
     required: [true, "Please enter the content of the news"],
   },
+  featured: {
+    type: Boolean,
+    required: [true, "Please enter the featured status of the news"],
+    default: false,
+  },
 });
 
 const News = mongoose.model("News", NewsSchema);
