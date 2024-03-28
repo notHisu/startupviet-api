@@ -5,14 +5,25 @@ const NewsSchema = mongoose.Schema({
     type: String,
     required: [true, "Please enter post name"],
   },
+  note: {
+    type: String,
+    required: [true, "Please enter note"],
+  },
+  username: {
+    type: String,
+    required: [true, "Please enter username"],
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  image: {
+    type: String,
+    required: [true, "Please upload an image"],
+  },
   content: {
     type: String,
-    required: [true, "Please enter psot content"],
-  },
-  likeAmounts: {
-    type: Number,
-    required: true,
-    default: 0,
+    required: [true, "Please enter the content of the news"],
   },
 });
 
